@@ -1,0 +1,122 @@
+{
+  "reactFunctionalComponent": {
+    "prefix": "rfc",
+    "body": [
+      "export default function ${TM_FILENAME_BASE}() {",
+      "  return (",
+      "    ${1:<div>\n\t\t\t<h1>${TM_FILENAME_BASE}</h1>\n\t\t</div>}",
+      "  )",
+      "}",
+      ""
+    ],
+    "description": "Creates a React Functional Component with ES7 module system"
+  },
+  "useState": {
+    "prefix": "us",
+    "body": "const [${1:setterName}, set${1:setterName}] = useState(${2:defVal})$0",
+    "description": "use state hook"
+  },
+  "useEffect": {
+    "prefix": "ue",
+    "body": ["useEffect(() => {", "\t$1", "}, [])"],
+    "description": "React useEffect() hook"
+  },
+  "useEffect with return": {
+    "prefix": "uer",
+    "body": [
+      "useEffect(() => {",
+      "\t$1",
+      "\n\treturn () => {",
+      "\t\t$2",
+      "\t}",
+      "}, [${3:dependencies}])$0"
+    ],
+    "description": "React useEffect() hook with return statement"
+  },
+  "useContext": {
+    "prefix": "uc",
+    "body": ["const $1 = useContext($2)$0"],
+    "description": "React useContext() hook"
+  },
+  "useRef": {
+    "prefix": "ur",
+    "body": ["const ${1:elName}El = useRef(null)$0"],
+    "description": "React useContext() hook"
+  },
+  "useCallback": {
+    "prefix": "ucb",
+    "body": [
+      "const ${1:memoizedCallback} = useCallback(",
+      "\t() => {",
+      "\t\t${2:doSomething}(${3:a}, ${4:b})",
+      "\t},",
+      "\t[${5:a}, ${6:b}],",
+      ")$0"
+    ],
+    "description": "React useCallback() hook"
+  },
+  "useMemo": {
+    "prefix": "ume",
+    "body": [
+      "const ${1:memoizedValue} = useMemo(() => ${2:computeExpensiveValue}(${3:a}, ${4:b}), [${5:a}, ${6:b}])$0"
+    ],
+    "description": "React useMemo() hook"
+  },
+  "jsx elements map": {
+    "prefix": "jm",
+    "body": "{${1:array}.map((item) => <${2:elementName} key={item.id}>\n\t$0\n</${2}>)}",
+    "description": "an element self closed"
+  },
+  "jsx elements map with return": {
+    "prefix": "jmr",
+    "body": "{${1:array}.map((item) => {\n\treturn <${2:elementName} key={item.id}>\n\t$0\n</${2}>\n})}",
+    "description": "an element self closed"
+  },
+  "jsx element": {
+    "prefix": "j",
+    "body": "<${1:elementName}>\n\t$0\n</${1}>",
+    "description": "an element"
+  },
+  "jsx element self closed": {
+    "prefix": "jc",
+    "body": "<${1:elementName} />",
+    "description": "an element self closed"
+  },
+  "shouldComponentUpdate": {
+    "prefix": "scu",
+    "body": "shouldComponentUpdate (nextProps, nextState) {\n\t$0\n}\n",
+    "description": "Invoked before rendering when new props or state are being received. "
+  },
+  "componentWillUpdate": {
+    "prefix": "cwup",
+    "body": "componentWillUpdate (nextProps, nextState) {\n\t$0\n}\n",
+    "description": "Invoked immediately before rendering when new props or state are being received."
+  },
+  "componentDidUpdate": {
+    "prefix": "cdup",
+    "body": "componentDidUpdate (prevProps, prevState) {\n\t$0\n}\n",
+    "description": "Invoked immediately after the component's updates are flushed to the DOM."
+  },
+  "componentWillUnmount": {
+    "prefix": "cwun",
+    "body": "componentWillUnmount () {\n\t$0\n}\n",
+    "description": "Invoked immediately before a component is unmounted from the DOM."
+  },
+  "Import external module.": {
+    "prefix": "import statement",
+    "body": ["import { $0 } from \"${1:module}\";"],
+    "description": "Import external module."
+  },
+  "import module": {
+    "prefix": "im",
+    "body": "import ${2:*} from '${1:module}'"
+  },
+  "import module as": {
+    "prefix": "ia",
+    "body": "import ${2:*} as ${3:name} from '${1:module}'"
+  },
+  "import module destructured": {
+    "prefix": "id",
+    "body": "import {$2} from '${1:module}'"
+  }
+}

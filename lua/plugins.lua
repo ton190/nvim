@@ -1,30 +1,13 @@
--- Install Plugin Manager
-local install_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-	vim.fn.execute("!git clone https://github.com/wbthomason/packer.nvim " .. install_path)
-end
--- Auto Source
-local packer_group = vim.api.nvim_create_augroup("Packer", { clear = true })
-vim.api.nvim_create_autocmd("BufWritePost", { command = "source <afile>", group = packer_group, pattern = "*.lua" })
-vim.api.nvim_create_autocmd("BufWritePost", { command = "PackerSync", group = packer_group, pattern = "plugins.lua" })
--- Have packer use a popup window
-local packer = require("packer")
-packer.init({ display = {
-	open_fn = function()
-		return require("packer.util").float({ border = "rounded" })
-	end,
-} })
+local packer = require("packer_config")
 
--- Install Plugins
 packer.startup(function(use)
-	use("wbthomason/packer.nvim") -- Package manager
-
 	use({
-		-- Overall Plugins
+		"wbthomason/packer.nvim", --- Packer
 		"ellisonleao/gruvbox.nvim", -- Theme
 		"goolord/alpha-nvim", -- Dashboard
 		"kyazdani42/nvim-tree.lua", -- File browser
 		"ryanoasis/vim-devicons", -- Icons for vim-tree
+		"lukas-reineke/indent-blankline.nvim", -- Indent line
 		"kyazdani42/nvim-web-devicons", -- Extra icons for vim-tree
 		"lewis6991/gitsigns.nvim", -- Git integration
 		"nvim-lualine/lualine.nvim", -- Status line
@@ -43,13 +26,19 @@ packer.startup(function(use)
 		"nvim-telescope/telescope-project.nvim", --Telescope extension
 		"nvim-telescope/telescope.nvim", -- Fuzzy finder
 		"nvim-telescope/telescope-file-browser.nvim", -- Fuzzy finder
+		"nvim-telescope/telescope-media-files.nvim", -- Telescop imgage preview
 		"nvim-lua/plenary.nvim", -- Useful lua functions used by lots of plugins
-		"andweeb/presence.nvim",
+		"nvim-lua/popup.nvim", -- Popup
+		"jlcrochet/vim-razor", -- Razor highlight
+		"glepnir/lspsaga.nvim", -- Treesitter highlights
+		"dinhhuy258/git.nvim", -- A simple clone of the plugin vim-fugitive
 		-- Nvim Helpers
+		"RRethy/vim-illuminate", -- Highlight uses under cursor
 		"tpope/vim-commentary", -- Autoc comments
 		"windwp/nvim-autopairs", -- Auto pairs
 		"tpope/vim-surround", -- Auto surround
 		"alvan/vim-closetag", -- Auto close tags
+		"windwp/nvim-ts-autotag", -- Auto close tags
 		-- Javasctip
 		"pangloss/vim-javascript", -- Javascript highlights
 		"maxmellon/vim-jsx-pretty", -- React highlights
@@ -63,6 +52,7 @@ packer.startup(function(use)
 		"neovim/nvim-lspconfig", -- Main lsp configuration
 		"williamboman/mason.nvim", -- Easy lsp config
 		"williamboman/mason-lspconfig.nvim", -- Mason/Lspconfig connection
+		"tzachar/cmp-tabnine", -- Tabnine
 		-- Lsp Autompletion
 		requires = {
 			use({ "hrsh7th/nvim-cmp" }), -- Compilation
@@ -77,9 +67,3 @@ packer.startup(function(use)
 		"onsails/lspkind-nvim", -- Lsp pictogramms
 	})
 end)
-
--- Load Plugins
-require("config/theme") -- StartScreen, ColorScheme, StatusLine
-require("config/lsp") -- Lsp Plugins
-require("config/main") -- All other Plugins
-vim.cmd("source ~/.config/nvim/lua/config/vimwiki.vim") -- VimWiki

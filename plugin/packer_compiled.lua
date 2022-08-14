@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -84,30 +89,20 @@ _G.packer_plugins = {
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["coc.nvim"] = {
-    loaded = true,
-    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/coc.nvim",
-    url = "https://github.com/neoclide/coc.nvim"
-  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
-  },
-  ["emmet-vim"] = {
-    loaded = true,
-    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/emmet-vim",
-    url = "https://github.com/mattn/emmet-vim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["gruvbox.nvim"] = {
+  ["lsp_lines.nvim"] = {
     loaded = true,
-    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
+    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/lsp_lines.nvim",
+    url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -134,11 +129,6 @@ _G.packer_plugins = {
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-colorizer.lua"] = {
-    loaded = true,
-    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
-    url = "https://github.com/NvChad/nvim-colorizer.lua"
-  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -148,11 +138,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -179,6 +164,11 @@ _G.packer_plugins = {
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/presence.nvim",
     url = "https://github.com/andweeb/presence.nvim"
   },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -189,45 +179,20 @@ _G.packer_plugins = {
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["twilight.nvim"] = {
-    loaded = true,
-    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/twilight.nvim",
-    url = "https://github.com/folke/twilight.nvim"
-  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
+  ["vim-cool"] = {
+    loaded = true,
+    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/vim-cool",
+    url = "https://github.com/romainl/vim-cool"
+  },
   ["vim-devicons"] = {
     loaded = true,
     path = "/home/ton190/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
-  },
-  ["vim-floaterm"] = {
-    loaded = true,
-    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/vim-floaterm",
-    url = "https://github.com/voldikss/vim-floaterm"
-  },
-  ["vim-js"] = {
-    loaded = true,
-    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/vim-js",
-    url = "https://github.com/yuezk/vim-js"
-  },
-  ["vim-jsx-pretty"] = {
-    loaded = true,
-    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
-    url = "https://github.com/maxmellon/vim-jsx-pretty"
-  },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/vim-surround",
-    url = "https://github.com/tpope/vim-surround"
-  },
-  ["zen-mode.nvim"] = {
-    loaded = true,
-    path = "/home/ton190/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
-    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
