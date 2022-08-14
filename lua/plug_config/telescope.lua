@@ -1,6 +1,15 @@
 local telescope = require("telescope")
 telescope.setup({
 	defaults = {
+		layout_config = {
+			horizontal = {
+				preview_cutoff = 0,
+			},
+		},
+		previewer = true,
+		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
+		grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
+		qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
 		mappings = { n = { ["o"] = require("telescope.actions").select_default } },
 		initial_mode = "insert",
 		hidden = true,

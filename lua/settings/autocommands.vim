@@ -26,10 +26,12 @@ augroup _fix_focus
 	autocmd CursorHold,CursorHoldI * checktime
 augroup end
 
-augroup _popup_diagnostics
-	autocmd!
-	autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nill, {border="rounded", focus=false})
-augroup end
+autocmd CursorHold * lua require('echo-diagnostics').echo_line_diagnostic()
+
+" augroup _popup_diagnostics
+" 	autocmd!
+" 	autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nill, {border="rounded", focus=false})
+" augroup end
 
 augroup _auto_format
 	autocmd!

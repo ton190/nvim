@@ -52,6 +52,7 @@ vim.api.nvim_command("set nofoldenable")
 vim.api.nvim_command("set signcolumn=yes")
 vim.api.nvim_command("set completeopt=preview")
 
-	require("settings/colors")
+require("settings/colors")
 vim.cmd("source ~/.config/nvim/lua/settings/autocommands.vim")
 vim.cmd([[let g:closetag_filetypes = 'html,xhtml,jsx,javascript,typescript.tsx']])
+-- require("lsp_lines").setup {}

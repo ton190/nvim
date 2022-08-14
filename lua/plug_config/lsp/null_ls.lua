@@ -12,7 +12,7 @@ local completion = null_ls.builtins.completion
 null_ls.setup({
 	debug = false,
 	sources = {
-		diagnostics.eslint_d,
+		-- diagnostics.eslint_d,
 		formatting.eslint_d,
 		formatting.stylua,
 		formatting.prettier,

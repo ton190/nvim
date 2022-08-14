@@ -32,6 +32,7 @@ packer.startup(function(use)
 		"jlcrochet/vim-razor", -- Razor highlight
 		"glepnir/lspsaga.nvim", -- Treesitter highlights
 		"dinhhuy258/git.nvim", -- A simple clone of the plugin vim-fugitive
+		"seblj/nvim-echo-diagnostics", -- Show diagnostics in echo
 		-- Nvim Helpers
 		"RRethy/vim-illuminate", -- Highlight uses under cursor
 		"tpope/vim-commentary", -- Autoc comments
@@ -52,8 +53,8 @@ packer.startup(function(use)
 		"neovim/nvim-lspconfig", -- Main lsp configuration
 		"williamboman/mason.nvim", -- Easy lsp config
 		"williamboman/mason-lspconfig.nvim", -- Mason/Lspconfig connection
-		"tzachar/cmp-tabnine", -- Tabnine
 		-- Lsp Autompletion
+		{'tzachar/cmp-tabnine', run='./install.sh'}, -- Tabnine
 		requires = {
 			use({ "hrsh7th/nvim-cmp" }), -- Compilation
 			use({ "hrsh7th/cmp-buffer" }), -- Buffer
